@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180628073705) do
+ActiveRecord::Schema.define(version: 20180628195643) do
+
+  create_table "goals", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.boolean "complete", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"

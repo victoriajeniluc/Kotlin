@@ -1,0 +1,32 @@
+<%= form_for @goal do |f| %> 
+	<% if @goal.errors.any? %> 
+	 	<div id="errors">
+	 		<h2><%= pluralize(@goal.errors.count, "error") %> prevented this goal from saving</h2>
+
+	 		<ul>
+	 			<% @goal.errors.full_messages.each do |msg| %> 
+	 				<li><%= msg %></li>
+	 			<% end %> 
+	 		</ul>
+	 	</div>
+	<% end %> 
+
+	<p>
+		<%= f.label :title %> 
+		<%= f.text_field :title %> 
+	</p>
+
+	<p>
+		<%= f.label :body %> 
+		<%= f.text_area :body %> 
+	</p>
+	
+	<p>
+		<%= f.label :complete %> 
+		<%= f.check_box :complete %>
+	</p>
+
+	<p>
+		<%= f.submit :Save %> 
+	</p>
+<% end %> 
