@@ -1,22 +1,24 @@
-<h1>This is where you create a new post!</h1>
+<div id="page_wrapper">
+	<h1>This is where you create a new post!</h1>
 
-<%= form_for :post, url: posts_path do |f| %> 
-	<p>
-		<%= f.label :title %> 
-		<%= f.text_field :title %> 
-	</p>
+	<%= form_for :post, url: posts_path do |f| %> 
+		<p>
+			<%= f.label :title %> 
+			<%= f.text_field :title %> 
+		</p>
 
-	<p>
-		<%= f.label :body %> 
-		<%= f.text_area :body %> 
-	</p>
-	
-	<p>
-		<%= f.label :gratitude %> 
-		<%= f.text_field :gratitude %> 
-	</p>
+		<p>
+			<%= f.label :body %> 
+			<%= f.text_area :body %> 
+		</p>
+		
+		<p>
+			<%= f.label :gratitude %> 
+			<%= f.text_field :gratitude %> 
+		</p>
 
-	<p>
-		<%= f.submit :Save %> 
-	</p>
-<% end %> 
+		<p>
+			<%= f.submit :Save %> 
+		</p>
+	<% end %> 
+</div>
