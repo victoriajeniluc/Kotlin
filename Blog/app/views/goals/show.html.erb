@@ -1,0 +1,6 @@
+<div id="post_content">
+	<h1 class ="title"><%= @goal.title %></h1>
+	<p class="body"><%= @goal.body %></p>
+	<p class="body"><%= @goal.completeness %></p>
+	<p class ="date"><%= @goal.created_at.strftime("%B %d, %Y") %> | <%= link_to 'Edit', edit_goal_path(@goal) %> | <%= link_to 'Delete' , goal_path(@goal), method: :delete, data: {confirm: 'Are you sure?'} %></p>
+</div>
