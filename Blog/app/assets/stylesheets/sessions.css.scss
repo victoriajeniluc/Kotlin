@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ *= require_self
+ */
+
+@import 'normalize';
+
+body {
+	background-image: url("bloming.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#login-form{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+h1 {
+	font-family: Vibur;
+	font-size: 3em;
+	color: black;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100%;
+}
+
+.login-form-title{
+	font-family: Vibur;
+	font-size: 1em;
+	color: black;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100%;
+}
+
+.login-form-input {
+	font-family: Vibur;
+	font-size: 1em;
+	color: black;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100%;
+	padding: .5em .5em;
+	border: 1px solid black;
+	padding: .5em .5em;
+	border-radius: 1.0em;
+	text-align:center;
+}
+
+.login-form-submit {
+	font-family: Vibur;
+	font-size: 1em;
+	color: black;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100%;
+	padding: .5em .5em;
+	border-radius: 1.0em;
+	border-color: black;
+}
+
+.login-form-submit:hover {
+	color: purple;
+	border: 1px solid black;
+}
