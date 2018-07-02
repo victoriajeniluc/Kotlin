@@ -1,8 +1,0 @@
-<h1>Goals</h1>
-<button class="button"><%= link_to "New Goal", new_goal_path %></button>
-
-<ul>
-	<% @goals.each do |goal| %> 
-		<li><%= link_to goal.title, goal %></li>
-	<% end %>
-</ul>
