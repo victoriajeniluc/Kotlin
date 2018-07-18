@@ -13,3 +13,5 @@
 //= require rails-ujs
 //= require_tree .
 stub sessions 
+stub users 
+
