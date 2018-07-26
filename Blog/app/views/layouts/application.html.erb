@@ -1,41 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tori Jeni Luc</title>
+    <title>Blog</title>
     <%= csrf_meta_tags %>
-		<%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Pacifico' %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <!-- 	<div id="sidebar">
-
-  		<ul>
-  			<li class="category">Social</li>
-  			<li><a href="https://www.instagram.com/torijeniluc/?hl=en">Instagram</a></li>
-  			<li><a href="https://github.com/victoriajeniluc">Github</li>
-  			<li><a href="mailto:victoriajeniluc@gmail.com">E-Mail</a></li>
-  		</ul>
-  	</div>
- -->
-  	<div id="main_content">
-  		<div id="header">
-  			<div class="buttons">
-  				<% if current_user %> 
-            <%= current_user.name %> | <button class="button"><%= link_to "New Post", new_post_path %></button> | <%= link_to "Logout", '/logout' %>
-          <% else %> 
-            <button class="button"><%= link_to 'Login', login_path %></button> | <button class="button"><%= link_to 'Signup', signup_path %></button>
-          <% end %>
-  			</div>
-  		</div>
-
-      <!-- this will give us a message from rails when we submit a new post or login in... etc.  -->
-      <% flash.each do |name, msg| %> 
-        <%= content_tag(:div, msg, class: "alert") %> 
-      <% end %>     
-  	   <%= yield %> 
-    </div>
+    <%= yield %>
   </body>
 </html>
