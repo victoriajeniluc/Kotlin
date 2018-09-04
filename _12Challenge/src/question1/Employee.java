@@ -16,6 +16,7 @@ package question1;
  */
 
 public class Employee {
+    // this class should be well encapsulated... i guess to keep the variables within this file?
     private String name;
     private double salary;
     private String organization;
